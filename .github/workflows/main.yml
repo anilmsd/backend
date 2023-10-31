@@ -13,9 +13,9 @@ jobs:
       - name: Login to docker hub
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} 
       - name: Build docker image
-        run: docker build -t integrationninjas/anil_repo .
+        run: docker build -t anilmsd/anil_repo .
       - name: Publish image to docker hub
-        run: docker push integrationninjas/anil_repo:latest
+        run: docker push anilmsd/anil_repo:latest
         
   deploy:
     needs: build
