@@ -15,7 +15,7 @@ jobs:
       - name: Build docker image
         run: docker build -t integrationninjas/nodejs-app .
       - name: Publish image to docker hub
-        run: docker push integrationninjas/nodejs-app:latest
+        run: docker push anilmsd/anil_repo:latest
         
   deploy:
     needs: build
