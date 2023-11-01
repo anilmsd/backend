@@ -11,6 +11,7 @@ require("dotenv").config();
 app.use(express.json());
 const formRoutes=require("./routes/form.js")
 const userResponse=require("./controller/userResponse.js");
+const mockdata=require("./Mock_Data.json");
 
 // Set security HTTP headers
 app.use(helmet());
@@ -54,6 +55,11 @@ mongoose
         console.log(err.message);
     });
 
+
+
+app.get("/rest/getAllUsers", (req, res) => {
+    res.send(userData)
+   });
 
 
 app.listen(4000, () =>
