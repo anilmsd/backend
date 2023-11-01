@@ -58,7 +58,7 @@ mongoose
 
 
 app.get("/rest/getAllUsers", (req, res) => {
-    res.send(userData)
+    res.send(mockdata)
    });
 
 
